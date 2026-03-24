@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Joshua Massa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #226e93;
+            --text-dark: #212121;
+            --bg-light: #f9f9f9;
+            --divider: 1px dashed #d1d1d1;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        header.hero {
+            background: linear-gradient(135deg, #303b44 0%, #1e252b 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header.hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 40px 0;
+            border-bottom: var(--divider);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* Hobbies Section */
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .hobby-card {
+            text-align: center;
+            background: white;
+            padding-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .hobby-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .hobby-card p {
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        /* Pets Section */
+        .pets-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .pets-content img {
+            max-width: 100%;
+            width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Goals Section */
+        .goals-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .goals-content img {
+            width: 150px;
+        }
+
+        .goals-list ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .goals-list li {
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header.hero h1 {
+                font-size: 2.5rem;
+            }
+            .pets-content, .goals-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>About me</h1>
+    </header>
+
+    <div class="container">
+        
+        <section class="intro">
+            <h2>Joshua Massa:</h2>
+            <p>I am a metro highschool student, making this webstite as part of a multimedia project</p>
+        </section>
+
+        <section class="hobbies">
+            <h2>My hobbies:</h2>
+            <div class="hobby-grid">
+                <div class="hobby-card">
+                    <img src="3d-printing.jpg" alt="3D Printing">
+                    <p>3d Printing</p>
+                </div>
+                <div class="hobby-card">
+                    <img src="soccer.jpg" alt="Soccer player on field">
+                    <p>Soccer ^thats me^</p>
+                </div>
+                <div class="hobby-card">
+                    <img src="running.jpg" alt="Running on track">
+                    <p>Running</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="pets">
+            <h2>My pets:</h2>
+            <div class="pets-content">
+                <p>I have 4 chickens, Cindy, Henny, Suzie, and Fire</p>
+                <img src="chickens.jpg" alt="Flock of chickens in a field">
+            </div>
+        </section>
+
+        <section class="goals">
+            <div class="goals-content">
+                <img src="panther-logo.png" alt="Metro Panthers Logo" class="logo">
+                <div class="goals-list">
+                    <h2>My goals After Metro:</h2>
+                    <ul>
+                        <li>Go to college</li>
+                        <li>Start a buisness</li>
+                        <li>Make money</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
